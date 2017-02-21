@@ -55,7 +55,6 @@ server <- function(input, output) {
     # sleep_total on the x-axis, the sleep_rem on the y-axis, and color based on the vore
     # You should specify facets based on what feature the user selected to "facet by"
     #   (hint: you can just pass that string to the `facet_wrap()` function!)
-    print(input$radio)
     
     p <- ggplot(data = animal.sleep, mapping = aes(x = sleep_total, y = sleep_rem, color = vore)) +
       geom_point() + facet_wrap(input$facet.by)
